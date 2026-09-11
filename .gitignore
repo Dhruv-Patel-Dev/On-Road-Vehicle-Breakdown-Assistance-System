@@ -1,0 +1,6 @@
+# Log files
+*.log
+
+# Local/server configuration
+.env
+.env.*
