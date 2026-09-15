@@ -119,7 +119,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'service_provider') {
             fetch('../backend/get_provider_jobs_today.php')
             .then(response => response.json())
             .then(data => {
-                displayJobs(data);
+                displayJobs(data.jobs || []);
             })
             .catch(error => {
                 console.error('Error:', error);
